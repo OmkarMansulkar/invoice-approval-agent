@@ -134,19 +134,3 @@ Run the rules engine tests (no server or API keys needed):
 ```bash
 python -m pytest tests/ -v
 ```
-
-## Talking points for a live-modification demo
-
-A few small, well-contained changes that are easy to plan out loud and
-execute live:
-
-1. **Add a new rule** — e.g. require manager approval for any invoice from a
-   brand-new vendor not in the approved list, by editing `rules.json` and
-   adding a test case.
-2. **Add a new agent node** — e.g. a "Notifier" agent after Approver that
-   would send a Slack/email alert for rejected invoices (stub is enough:
-   show where it plugs into `graph.py`).
-3. **Extend the schema** — e.g. add a `currency` column to `Invoice` and
-   thread it through extractor → validator → approver.
-4. **Swap mock mode for a real LLM call** — flip `MOCK_MODE=false`, set an
-   API key, and show the same pipeline now using a real model.
