@@ -1,0 +1,45 @@
+{
+  "rules": [
+    {
+      "id": "max_auto_approve_amount",
+      "description": "Invoices over $2000 cannot be auto-approved.",
+      "field": "total_amount",
+      "operator": "lte",
+      "value": 2000,
+      "severity": "review"
+    },
+    {
+      "id": "hard_reject_amount",
+      "description": "Invoices over $10000 are rejected outright pending manual finance review.",
+      "field": "total_amount",
+      "operator": "lte",
+      "value": 10000,
+      "severity": "reject"
+    },
+    {
+      "id": "approved_vendor_list",
+      "description": "Vendor must be on the approved vendor list.",
+      "field": "vendor_name",
+      "operator": "in",
+      "value": ["Acme Corp", "Globex Inc", "Initech", "Umbrella Supplies", "Staples"],
+      "severity": "review"
+    },
+    {
+      "id": "category_required",
+      "description": "Every invoice must have a spending category assigned.",
+      "field": "category",
+      "operator": "not_empty",
+      "value": null,
+      "severity": "review"
+    },
+    {
+      "id": "travel_category_limit",
+      "description": "Travel category invoices over $1000 need review.",
+      "field": "total_amount",
+      "operator": "lte",
+      "value": 1000,
+      "severity": "review",
+      "only_if": {"field": "category", "operator": "eq", "value": "Travel"}
+    }
+  ]
+}

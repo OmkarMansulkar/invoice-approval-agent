@@ -1,0 +1,8 @@
+Vendor: Staples
+Invoice Number: INV-2201
+Date: 2026-09-15
+Category: Office Supplies
+Line Items:
+- Printer Paper x10 @ 5.00
+- Stapler x2 @ 8.50
+Total: 67.00

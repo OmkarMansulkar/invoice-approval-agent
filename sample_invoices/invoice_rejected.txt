@@ -1,0 +1,7 @@
+Vendor: Globex Inc
+Invoice Number: INV-2203
+Date: 2026-09-20
+Category: Equipment
+Line Items:
+- Server Rack x2 @ 6500.00
+Total: 13000.00

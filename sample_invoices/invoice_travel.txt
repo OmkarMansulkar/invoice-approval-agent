@@ -1,0 +1,7 @@
+Vendor: Acme Corp
+Invoice Number: INV-2204
+Date: 2026-09-21
+Category: Travel
+Line Items:
+- Flight Ticket x1 @ 1450.00
+Total: 1450.00
